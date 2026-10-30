@@ -1,17 +1,152 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>mi-tuz-xa.ru</title>
-  <style>
-    body { margin: 0; padding: 16px; font-family: system-ui, sans-serif; }
-    video { display: block; width: 100%; max-width: 960px; height: auto;
-            aspect-ratio: 848 / 480; margin: 0 auto; background: #000; }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mi-tuz-xa.ru</title>
+    <meta name="theme-color" content="#4b0000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7c2529;
+            --primary-light: #af5351;
+            --primary-dark: #4b0000;
+            --secondary: #f1e9e4;
+        }
+
+        html,
+        body {
+            margin: 0;
+        }
+
+        body {
+            background: var(--secondary);
+            color: var(--primary-dark);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.5;
+            padding: 24px 16px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "PT Sans Narrow", sans-serif;
+        }
+
+        a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            border-bottom: 1px solid var(--primary-dark);
+        }
+
+        a:hover {
+            border-bottom-width: 2px;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 848 / 480;
+            background: #000;
+        }
+
+        h1 {
+            font-size: 2rem;
+            line-height: 1.15;
+            margin: 0 0 12px;
+        }
+
+        .gap {
+            margin-top: 28px;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            margin: 0 0 16px;
+        }
+
+        ul {
+            padding-left: 1.2em;
+        }
+
+        li {
+            margin: 4px 0;
+        }
+
+        .cta {
+            margin-top: 28px;
+            padding: 14px 16px;
+            background: #fff;
+            border-left: 4px solid var(--primary);
+            font-weight: 600;
+        }
+    </style>
 </head>
+
 <body>
-  <video src="media/reel-web.mp4" poster="media/reel-poster.jpg"
-         controls playsinline preload="metadata"></video>
+    <main>
+        <h1>Обращение коллектива Хабаровского ТЮЗа</h1>
+        <p class="lead">Коллектив Хабаровского театра юного зрителя обращается к губернатору
+            Хабаровского края Д.&nbsp;В.&nbsp;Демешину, министру культуры РФ О.&nbsp;Б.&nbsp;Любимовой
+            и ко всей театральной общественности.</p>
+
+        <video src="media/reel-web.mp4" poster="media/reel-poster.jpg" controls playsinline preload="metadata"></video>
+
+        <p class="gap"><strong>29 октября 2026 года</strong> директор театра подписал приказ
+            о сокращении девяти должностей творческого состава. С 1 января 2027 года
+            будут уволены:</p>
+        <ul>
+            <li>художественный руководитель Константин Кучикин;</li>
+            <li>заведующая литературной частью Анна Шавгарова — единственный
+                на Дальнем Востоке театровед такого уровня;</li>
+            <li>режиссёр-постановщик Ольга Подкорытова — единственный режиссёр в театре;</li>
+            <li>педагог по речи Елена Дьячкова;</li>
+            <li>ассистент режиссёра Александр Зверев.</li>
+        </ul>
+        <p>Кроме того, сокращаются ставки художника-модельера, бутафора
+            и музыкального руководителя.</p>
+
+        <p class="gap"><strong>Мы не понимаем</strong>, чем продиктовано решение убрать из театра именно творческий состав.</p>
+        <ul>
+            <li>Именно при этой команде театр получил «Золотую маску», «Арлекин»,
+                премию Корша, две премии Правительства РФ и много других наград.</li>
+            <li>В театре есть вакантные ставки, которые можно было сократить вместо
+                работающих специалистов.</li>
+            <li>Губернатор говорил об оптимизации бюджета за счёт руководящего звена
+                и о недопустимости сокращений среднего и исполнительского звена.
+                Здесь же сокращают творческий состав, а число начальников остаётся прежним.</li>
+            <li>За три года работы нового директора из театра ушли 12 ценных специалистов,
+                а конфликт между администрацией и коллективом длится уже два года.
+                Обращения в Министерство культуры результата не дали.</li>
+        </ul>
+        <p>Коллектив считает, что под видом сокращения происходит сведение счетов
+            и разрушение художественной основы театра, который долгие годы был гордостью
+            края и одним из лучших театров России.</p>
+
+        <p class="gap"><strong>Мы просим:</strong></p>
+        <ul>
+            <li>Губернатора — взять ситуацию под личный контроль и лично встретиться
+                с коллективом для открытого разговора.</li>
+            <li>Министра культуры — обратить внимание на проблему.</li>
+            <li>Приостановить приказ о сокращении до проверки того, соответствуют ли
+                кадровые решения интересам театра и распоряжению губернатора.</li>
+        </ul>
+
+        <p class="gap"><strong>Пожалуйста, поделитесь этой страницей</strong>
+            и поддержите наше обращение.</p>
+    </main>
 </body>
+
 </html>

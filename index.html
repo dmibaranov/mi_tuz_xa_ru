@@ -103,6 +103,32 @@
         li {
             margin: 4px 0;
         }
+        .share {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .share a,
+        .share button {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 2px solid var(--primary-dark);
+            border-radius: 0;
+            background: transparent;
+            color: var(--primary-dark);
+            font: 700 1.05rem/1.2 "PT Sans Narrow", sans-serif;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .share a:hover,
+        .share button:hover {
+            background: var(--primary-dark);
+            color: var(--secondary);
+            border-bottom-width: 2px;
+        }
     </style>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -173,7 +199,29 @@
 
         <p class="gap"><strong>Пожалуйста, поделитесь этой страницей</strong>
             и поддержите наше обращение.</p>
+        <div class="share">
+            <a href="https://t.me/share/url?url=https%3A%2F%2Fmi-tuz-xa.ru%2F&amp;text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%B0%20%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%A2%D0%AE%D0%97%D0%B0" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://vk.com/share.php?url=https%3A%2F%2Fmi-tuz-xa.ru%2F&amp;title=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%B0%20%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%A2%D0%AE%D0%97%D0%B0" target="_blank" rel="noopener">ВКонтакте</a>
+            <button type="button" id="copy-link">Скопировать ссылку</button>
+        </div>
     </main>
+    <script>
+        document.getElementById('copy-link').addEventListener('click', function () {
+            var btn = this, url = 'https://mi-tuz-xa.ru/';
+            function done() {
+                btn.textContent = 'Ссылка скопирована';
+                setTimeout(function () { btn.textContent = 'Скопировать ссылку'; }, 2000);
+            }
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(url).then(done, function () { prompt('Скопируйте ссылку:', url); });
+            } else {
+                var ta = document.createElement('textarea');
+                ta.value = url; document.body.appendChild(ta); ta.select();
+                try { document.execCommand('copy'); done(); } catch (e) { prompt('Скопируйте ссылку:', url); }
+                document.body.removeChild(ta);
+            }
+        });
+    </script>
 </body>
 
 </html>
